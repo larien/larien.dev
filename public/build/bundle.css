@@ -1,5 +1,9 @@
+.flex.svelte-f66dpe{display:flex}.flex-direction--row.svelte-f66dpe{flex-direction:row}.flex-direction--column.svelte-f66dpe{flex-direction:column}.flex-direction--row--reverse.svelte-f66dpe{flex-direction:row-reverse}.flex-direction--column--reverse.svelte-f66dpe{flex-direction:column-reverse}.flex-align--start.svelte-f66dpe{align-items:flex-start}.flex-align--center.svelte-f66dpe{align-items:center}.flex-align--end.svelte-f66dpe{align-items:flex-end}.flex-align--stretch.svelte-f66dpe{align-items:stretch}.flex-justify--start.svelte-f66dpe{justify-content:flex-start}.flex-justify--center.svelte-f66dpe{justify-content:center}.flex-justify--end.svelte-f66dpe{justify-content:flex-end}.flex-justify--around.svelte-f66dpe{justify-content:space-around}.flex-justify--between.svelte-f66dpe{justify-content:space-between}.flex-justify--evenly.svelte-f66dpe{justify-content:space-evenly}
 main.svelte-g972fn{text-align:center}.layout.svelte-g972fn{display:flex;min-height:100vh;flex-direction:column}@media(min-width: 640px){main.svelte-g972fn{max-width:none}}
+a.svelte-4p6h39{color:inherit}.contact.svelte-4p6h39{border-style:0 solid;border-radius:8px;color:grey;font-size:30px;padding:15px;margin:15px}.contact.svelte-4p6h39:hover{color:white}.email.svelte-4p6h39:hover{background-color:red}.linkedin.svelte-4p6h39:hover{background-color:#2867B2}.github.svelte-4p6h39:hover{background-color:black}.twitter.svelte-4p6h39:hover{background-color:#1da1f2}
+p.svelte-10ftdv3{color:white;position:absolute;left:15px;bottom:0px}
 .logo.svelte-asdrcw{margin:15px;position:absolute}
+p.svelte-1skukxc{color:white;position:absolute;right:15px;bottom:0px}
 #body.svelte-k39uwo{background-color:pink;display:flex;flex:1}
 #footer.svelte-k5lrzp{background-color:plum;height:100px;margin-top:auto}
 #header.svelte-mb6sln{background-color:aqua;height:100px;margin-bottom:auto}
