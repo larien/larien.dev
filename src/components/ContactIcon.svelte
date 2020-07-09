@@ -2,8 +2,6 @@
     export let icon;
 </script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <div class="contact {icon}">
     {#if icon == "email"}
         <a
@@ -41,7 +39,7 @@
     .contact {
         border-style: 0 solid;
         border-radius: 8px;
-        color: grey;
+        color: var(--secondary-text-color);
         font-size:30px;
         padding:15px;
         margin: 15px;  

@@ -18,7 +18,6 @@
 
 <style>
     #footer {
-        background-color: plum;
         height: 100px;
         margin-top:auto;
     }

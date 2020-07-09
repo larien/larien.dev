@@ -2,7 +2,7 @@
 
 <style>
     p {
-        color: white;
+        color: var(--secondary-text-color);
         position: absolute;
         right: 15px;
         bottom: 0px;

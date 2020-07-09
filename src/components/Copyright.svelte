@@ -8,7 +8,7 @@
 
 <style>
     p {
-        color: white;
+        color: var(--secondary-text-color);
         position: absolute;
         left: 15px;
         bottom: 0px;

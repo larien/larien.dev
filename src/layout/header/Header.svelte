@@ -3,15 +3,11 @@
 </script>
 
 <section id="header">
-        <Logo heigth=70 />
-
-		My footer component
-
+        <Logo heigth=50 />
 </section>
 
 <style>
     #header {
-        background-color: aqua;
         height: 100px;
         margin-bottom:auto;
     }
