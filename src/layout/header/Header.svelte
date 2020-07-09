@@ -3,18 +3,16 @@
 </script>
 
 <section id="header">
-        <Logo />
+        <Logo heigth=70 />
 
-		My header component
+		My footer component
 
 </section>
 
 <style>
     #header {
         background-color: aqua;
-        display: flex;
-        flex: 0.1;
-        max-height: 10vh;
+        height: 100px;
         margin-bottom:auto;
     }
 </style>

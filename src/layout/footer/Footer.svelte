@@ -7,9 +7,7 @@
 <style>
     #footer {
         background-color: plum;
-        display: flex;
-        flex: 0.1;
-        max-height: 10vh;
+        height: 100px;
         margin-top:auto;
     }
 </style>

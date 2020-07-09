@@ -1,7 +1,7 @@
 main.svelte-g972fn{text-align:center}.layout.svelte-g972fn{display:flex;min-height:100vh;flex-direction:column}@media(min-width: 640px){main.svelte-g972fn{max-width:none}}
-.logo.svelte-1et9i5y{height:100%;margin:10px}
+.logo.svelte-asdrcw{margin:15px;position:absolute}
 #body.svelte-k39uwo{background-color:pink;display:flex;flex:1}
-#footer.svelte-1ab1dbl{background-color:plum;display:flex;flex:0.1;max-height:10vh;margin-top:auto}
-#header.svelte-12bt99b{background-color:aqua;display:flex;flex:0.1;max-height:10vh;margin-bottom:auto}
+#footer.svelte-k5lrzp{background-color:plum;height:100px;margin-top:auto}
+#header.svelte-mb6sln{background-color:aqua;height:100px;margin-bottom:auto}
 
 /*# sourceMappingURL=bundle.css.map */

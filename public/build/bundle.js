@@ -629,14 +629,18 @@ var app = (function () {
     	let div;
     	let logo;
     	let current;
-    	logo = new Logo({ props: { height: "80" }, $$inline: true });
+
+    	logo = new Logo({
+    			props: { height: /*heigth*/ ctx[0] },
+    			$$inline: true
+    		});
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			create_component(logo.$$.fragment);
-    			attr_dev(div, "class", "logo svelte-1et9i5y");
-    			add_location(div, file, 4, 0, 65);
+    			attr_dev(div, "class", "logo svelte-asdrcw");
+    			add_location(div, file, 6, 0, 88);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -646,7 +650,11 @@ var app = (function () {
     			mount_component(logo, div, null);
     			current = true;
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			const logo_changes = {};
+    			if (dirty & /*heigth*/ 1) logo_changes.height = /*heigth*/ ctx[0];
+    			logo.$set(logo_changes);
+    		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(logo.$$.fragment, local);
@@ -674,7 +682,8 @@ var app = (function () {
     }
 
     function instance$1($$self, $$props, $$invalidate) {
-    	const writable_props = [];
+    	let { heigth } = $$props;
+    	const writable_props = ["heigth"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Logo> was created with unknown prop '${key}'`);
@@ -682,14 +691,28 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Logo", $$slots, []);
-    	$$self.$capture_state = () => ({ Logo });
-    	return [];
+
+    	$$self.$set = $$props => {
+    		if ("heigth" in $$props) $$invalidate(0, heigth = $$props.heigth);
+    	};
+
+    	$$self.$capture_state = () => ({ Logo, heigth });
+
+    	$$self.$inject_state = $$props => {
+    		if ("heigth" in $$props) $$invalidate(0, heigth = $$props.heigth);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [heigth];
     }
 
     class Logo_1 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {});
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { heigth: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -697,6 +720,21 @@ var app = (function () {
     			options,
     			id: create_fragment$1.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*heigth*/ ctx[0] === undefined && !("heigth" in props)) {
+    			console.warn("<Logo> was created without expected prop 'heigth'");
+    		}
+    	}
+
+    	get heigth() {
+    		throw new Error("<Logo>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set heigth(value) {
+    		throw new Error("<Logo>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -708,15 +746,15 @@ var app = (function () {
     	let logo;
     	let t;
     	let current;
-    	logo = new Logo_1({ $$inline: true });
+    	logo = new Logo_1({ props: { heigth: "70" }, $$inline: true });
 
     	const block = {
     		c: function create() {
     			section = element("section");
     			create_component(logo.$$.fragment);
-    			t = text("\n\n\t\tMy header component");
+    			t = text("\n\n\t\tMy footer component");
     			attr_dev(section, "id", "header");
-    			attr_dev(section, "class", "svelte-12bt99b");
+    			attr_dev(section, "class", "svelte-mb6sln");
     			add_location(section, file$1, 4, 0, 72);
     		},
     		l: function claim(nodes) {
@@ -860,7 +898,7 @@ var app = (function () {
     			section = element("section");
     			section.textContent = "My footer component";
     			attr_dev(section, "id", "footer");
-    			attr_dev(section, "class", "svelte-1ab1dbl");
+    			attr_dev(section, "class", "svelte-k5lrzp");
     			add_location(section, file$3, 0, 0, 0);
     		},
     		l: function claim(nodes) {

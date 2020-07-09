@@ -1,14 +1,16 @@
 <script>
     import Logo from '../../public/logo.svg'
+
+    export let heigth
 </script>
 
 <div class="logo">
-    <Logo height=80 />
+    <Logo height={heigth} />
 </div>
 
 <style>
-    .logo{
-        height: 100%;
-        margin: 10px;
+    .logo {
+        margin: 15px;
+        position: absolute;
     }
 </style>
