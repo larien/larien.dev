@@ -1,11 +1,11 @@
 <script>
     import Logo from '../../public/logo.svg'
 
-    export let heigth
+    export let height
 </script>
 
 <div class="logo">
-    <Logo height={heigth} />
+    <Logo height={height} />
 </div>
 
 <style>

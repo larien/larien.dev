@@ -719,7 +719,7 @@ var app = (function () {
     	let current;
 
     	logo = new Logo({
-    			props: { height: /*heigth*/ ctx[0] },
+    			props: { height: /*height*/ ctx[0] },
     			$$inline: true
     		});
 
@@ -740,7 +740,7 @@ var app = (function () {
     		},
     		p: function update(ctx, [dirty]) {
     			const logo_changes = {};
-    			if (dirty & /*heigth*/ 1) logo_changes.height = /*heigth*/ ctx[0];
+    			if (dirty & /*height*/ 1) logo_changes.height = /*height*/ ctx[0];
     			logo.$set(logo_changes);
     		},
     		i: function intro(local) {
@@ -770,8 +770,8 @@ var app = (function () {
     }
 
     function instance$1($$self, $$props, $$invalidate) {
-    	let { heigth } = $$props;
-    	const writable_props = ["heigth"];
+    	let { height } = $$props;
+    	const writable_props = ["height"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Logo> was created with unknown prop '${key}'`);
@@ -781,26 +781,26 @@ var app = (function () {
     	validate_slots("Logo", $$slots, []);
 
     	$$self.$set = $$props => {
-    		if ("heigth" in $$props) $$invalidate(0, heigth = $$props.heigth);
+    		if ("height" in $$props) $$invalidate(0, height = $$props.height);
     	};
 
-    	$$self.$capture_state = () => ({ Logo, heigth });
+    	$$self.$capture_state = () => ({ Logo, height });
 
     	$$self.$inject_state = $$props => {
-    		if ("heigth" in $$props) $$invalidate(0, heigth = $$props.heigth);
+    		if ("height" in $$props) $$invalidate(0, height = $$props.height);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [heigth];
+    	return [height];
     }
 
     class Logo_1 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { heigth: 0 });
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { height: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -812,16 +812,16 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*heigth*/ ctx[0] === undefined && !("heigth" in props)) {
-    			console.warn("<Logo> was created without expected prop 'heigth'");
+    		if (/*height*/ ctx[0] === undefined && !("height" in props)) {
+    			console.warn("<Logo> was created without expected prop 'height'");
     		}
     	}
 
-    	get heigth() {
+    	get height() {
     		throw new Error("<Logo>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set heigth(value) {
+    	set height(value) {
     		throw new Error("<Logo>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -833,7 +833,7 @@ var app = (function () {
     	let section;
     	let logo;
     	let current;
-    	logo = new Logo_1({ props: { heigth: "50" }, $$inline: true });
+    	logo = new Logo_1({ props: { height: "50" }, $$inline: true });
 
     	const block = {
     		c: function create() {
@@ -1281,7 +1281,7 @@ var app = (function () {
     	return block;
     }
 
-    // (76:35) 
+    // (77:35) 
     function create_if_block_2(ctx) {
     	let p0;
     	let t1;
@@ -1307,7 +1307,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			p0 = element("p");
-    			p0.textContent = "Hey!";
+    			p0.textContent = "¡Hola!";
     			t1 = space();
     			p1 = element("p");
     			t2 = text("Soy ");
@@ -1325,26 +1325,26 @@ var app = (function () {
     			p3.textContent = "~typewriter~";
     			t12 = space();
     			p4 = element("p");
-    			t13 = text("que vive en ");
+    			t13 = text("de ");
     			strong2 = element("strong");
     			strong2.textContent = "São Paulo";
     			t15 = text(", ");
     			strong3 = element("strong");
     			strong3.textContent = "Brasil";
     			t17 = text(".");
-    			add_location(p0, file$2, 76, 12, 2446);
+    			add_location(p0, file$2, 77, 12, 2465);
     			attr_dev(strong0, "class", "highlight svelte-tchylh");
-    			add_location(strong0, file$2, 77, 19, 2477);
-    			add_location(p1, file$2, 77, 12, 2470);
+    			add_location(strong0, file$2, 78, 19, 2498);
+    			add_location(p1, file$2, 78, 12, 2491);
     			attr_dev(strong1, "class", "highlight svelte-tchylh");
-    			add_location(strong1, file$2, 78, 21, 2545);
-    			add_location(p2, file$2, 78, 12, 2536);
-    			add_location(p3, file$2, 79, 12, 2613);
+    			add_location(strong1, file$2, 79, 21, 2566);
+    			add_location(p2, file$2, 79, 12, 2557);
+    			add_location(p3, file$2, 80, 12, 2634);
     			attr_dev(strong2, "class", "highlight svelte-tchylh");
-    			add_location(strong2, file$2, 80, 27, 2660);
+    			add_location(strong2, file$2, 81, 18, 2672);
     			attr_dev(strong3, "class", "highlight svelte-tchylh");
-    			add_location(strong3, file$2, 80, 73, 2706);
-    			add_location(p4, file$2, 80, 12, 2645);
+    			add_location(strong3, file$2, 81, 64, 2718);
+    			add_location(p4, file$2, 81, 12, 2666);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -1386,7 +1386,7 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(76:35) ",
+    		source: "(77:35) ",
     		ctx
     	});
 
@@ -1401,16 +1401,18 @@ var app = (function () {
     	let t2;
     	let strong0;
     	let t4;
-    	let strong1;
-    	let t7;
     	let p2;
-    	let t9;
+    	let t5;
+    	let strong1;
+    	let t8;
     	let p3;
     	let t10;
+    	let p4;
+    	let t11;
     	let strong2;
-    	let t12;
+    	let t13;
     	let strong3;
-    	let t14;
+    	let t15;
 
     	const block = {
     		c: function create() {
@@ -1421,33 +1423,36 @@ var app = (function () {
     			t2 = text("My name is ");
     			strong0 = element("strong");
     			strong0.textContent = "Lauren";
-    			t4 = text(" and I'm a ");
+    			t4 = space();
+    			p2 = element("p");
+    			t5 = text("and I'm a ");
     			strong1 = element("strong");
     			strong1.textContent = `${/*age*/ ctx[3]} year old`;
-    			t7 = space();
-    			p2 = element("p");
-    			p2.textContent = "~typewriter~";
-    			t9 = space();
+    			t8 = space();
     			p3 = element("p");
-    			t10 = text("based in ");
+    			p3.textContent = "~typewriter~";
+    			t10 = space();
+    			p4 = element("p");
+    			t11 = text("based in ");
     			strong2 = element("strong");
     			strong2.textContent = "São Paulo";
-    			t12 = text(", ");
+    			t13 = text(", ");
     			strong3 = element("strong");
     			strong3.textContent = "Brazil";
-    			t14 = text(".");
+    			t15 = text(".");
     			add_location(p0, file$2, 71, 12, 2105);
     			attr_dev(strong0, "class", "highlight svelte-tchylh");
     			add_location(strong0, file$2, 72, 26, 2143);
-    			attr_dev(strong1, "class", "highlight svelte-tchylh");
-    			add_location(strong1, file$2, 72, 78, 2195);
     			add_location(p1, file$2, 72, 12, 2129);
-    			add_location(p2, file$2, 73, 12, 2261);
+    			attr_dev(strong1, "class", "highlight svelte-tchylh");
+    			add_location(strong1, file$2, 73, 25, 2214);
+    			add_location(p2, file$2, 73, 12, 2201);
+    			add_location(p3, file$2, 74, 12, 2280);
     			attr_dev(strong2, "class", "highlight svelte-tchylh");
-    			add_location(strong2, file$2, 74, 24, 2305);
+    			add_location(strong2, file$2, 75, 24, 2324);
     			attr_dev(strong3, "class", "highlight svelte-tchylh");
-    			add_location(strong3, file$2, 74, 70, 2351);
-    			add_location(p3, file$2, 74, 12, 2293);
+    			add_location(strong3, file$2, 75, 70, 2370);
+    			add_location(p4, file$2, 75, 12, 2312);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -1455,27 +1460,31 @@ var app = (function () {
     			insert_dev(target, p1, anchor);
     			append_dev(p1, t2);
     			append_dev(p1, strong0);
-    			append_dev(p1, t4);
-    			append_dev(p1, strong1);
-    			insert_dev(target, t7, anchor);
+    			insert_dev(target, t4, anchor);
     			insert_dev(target, p2, anchor);
-    			insert_dev(target, t9, anchor);
+    			append_dev(p2, t5);
+    			append_dev(p2, strong1);
+    			insert_dev(target, t8, anchor);
     			insert_dev(target, p3, anchor);
-    			append_dev(p3, t10);
-    			append_dev(p3, strong2);
-    			append_dev(p3, t12);
-    			append_dev(p3, strong3);
-    			append_dev(p3, t14);
+    			insert_dev(target, t10, anchor);
+    			insert_dev(target, p4, anchor);
+    			append_dev(p4, t11);
+    			append_dev(p4, strong2);
+    			append_dev(p4, t13);
+    			append_dev(p4, strong3);
+    			append_dev(p4, t15);
     		},
     		p: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(p1);
-    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(p2);
-    			if (detaching) detach_dev(t9);
+    			if (detaching) detach_dev(t8);
     			if (detaching) detach_dev(p3);
+    			if (detaching) detach_dev(t10);
+    			if (detaching) detach_dev(p4);
     		}
     	};
 
@@ -2106,7 +2115,7 @@ var app = (function () {
     			add_location(i, file$5, 31, 12, 829);
     			attr_dev(a, "title", "GitHub page");
     			attr_dev(a, "href", "https://github.com/larien");
-    			attr_dev(a, "class", "svelte-cyzzic");
+    			attr_dev(a, "class", "svelte-1jbdpm");
     			add_location(a, file$5, 27, 8, 723);
     		},
     		m: function mount(target, anchor) {
@@ -2142,7 +2151,7 @@ var app = (function () {
     			add_location(i, file$5, 24, 12, 640);
     			attr_dev(a, "title", "Twitter page");
     			attr_dev(a, "href", "http://www.twitter.com/larienmf");
-    			attr_dev(a, "class", "svelte-cyzzic");
+    			attr_dev(a, "class", "svelte-1jbdpm");
     			add_location(a, file$5, 20, 8, 527);
     		},
     		m: function mount(target, anchor) {
@@ -2178,7 +2187,7 @@ var app = (function () {
     			add_location(i, file$5, 17, 12, 442);
     			attr_dev(a, "title", "LinkedIn page");
     			attr_dev(a, "href", "https://www.linkedin.com/in/lauren-ferreira-9836914b/");
-    			attr_dev(a, "class", "svelte-cyzzic");
+    			attr_dev(a, "class", "svelte-1jbdpm");
     			add_location(a, file$5, 13, 8, 306);
     		},
     		m: function mount(target, anchor) {
@@ -2214,7 +2223,7 @@ var app = (function () {
     			add_location(i, file$5, 10, 12, 220);
     			attr_dev(a, "title", "E-mail address");
     			attr_dev(a, "href", "mailto:lauren.ferremch@gmail.com");
-    			attr_dev(a, "class", "svelte-cyzzic");
+    			attr_dev(a, "class", "svelte-1jbdpm");
     			add_location(a, file$5, 6, 8, 104);
     		},
     		m: function mount(target, anchor) {
@@ -2255,7 +2264,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			if (if_block) if_block.c();
-    			attr_dev(div, "class", div_class_value = "contact " + /*icon*/ ctx[0] + " svelte-cyzzic");
+    			attr_dev(div, "class", div_class_value = "contact " + /*icon*/ ctx[0] + " svelte-1jbdpm");
     			add_location(div, file$5, 4, 0, 41);
     		},
     		l: function claim(nodes) {
@@ -2276,7 +2285,7 @@ var app = (function () {
     				}
     			}
 
-    			if (dirty & /*icon*/ 1 && div_class_value !== (div_class_value = "contact " + /*icon*/ ctx[0] + " svelte-cyzzic")) {
+    			if (dirty & /*icon*/ 1 && div_class_value !== (div_class_value = "contact " + /*icon*/ ctx[0] + " svelte-1jbdpm")) {
     				attr_dev(div, "class", div_class_value);
     			}
     		},
@@ -2665,13 +2674,14 @@ var app = (function () {
     			attr_dev(link0, "rel", "stylesheet");
     			attr_dev(link0, "href", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
     			attr_dev(link0, "class", "svelte-z2n8iw");
-    			add_location(link0, file$8, 12, 0, 283);
+    			add_location(link0, file$8, 17, 0, 395);
     			attr_dev(link1, "href", "https://fonts.googleapis.com/css?family=Coda");
     			attr_dev(link1, "rel", "stylesheet");
     			attr_dev(link1, "class", "svelte-z2n8iw");
-    			add_location(link1, file$8, 13, 0, 397);
+    			add_location(link1, file$8, 18, 0, 509);
+    			attr_dev(i, "title", /*title*/ ctx[0]);
     			attr_dev(i, "class", "fa fa-moon-o svelte-z2n8iw");
-    			add_location(i, file$8, 15, 0, 474);
+    			add_location(i, file$8, 20, 0, 586);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2691,11 +2701,15 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(i, "click", toggle, false, false, false);
+    				dispose = listen_dev(i, "click", /*toggle*/ ctx[1], false, false, false);
     				mounted = true;
     			}
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			if (!current || dirty & /*title*/ 1) {
+    				attr_dev(i, "title", /*title*/ ctx[0]);
+    			}
+    		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(header.$$.fragment, local);
@@ -2737,12 +2751,17 @@ var app = (function () {
     	return block;
     }
 
-    function toggle() {
-    	window.document.body.classList.toggle("dark-mode");
-    }
-
     function instance$9($$self, $$props, $$invalidate) {
+    	let titleToggl = true;
+    	let title;
     	toggle(); // start with dark mode
+
+    	function toggle() {
+    		titleToggl = !titleToggl;
+    		$$invalidate(0, title = titleToggl ? "Dark mode" : "Light mode");
+    		window.document.body.classList.toggle("dark-mode");
+    	}
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -2751,8 +2770,26 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("App", $$slots, []);
-    	$$self.$capture_state = () => ({ Header, Body, Footer, toggle });
-    	return [];
+
+    	$$self.$capture_state = () => ({
+    		Header,
+    		Body,
+    		Footer,
+    		titleToggl,
+    		title,
+    		toggle
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("titleToggl" in $$props) titleToggl = $$props.titleToggl;
+    		if ("title" in $$props) $$invalidate(0, title = $$props.title);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [title, toggle];
     }
 
     class App extends SvelteComponentDev {

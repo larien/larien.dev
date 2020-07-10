@@ -3,9 +3,14 @@
 	import Body from './layout/body/Body.svelte'
 	import Footer from './layout/footer/Footer.svelte'
 
+	let titleToggl = true
+	let title
+
 	toggle() // start with dark mode
 
 	function toggle() {
+		titleToggl = !titleToggl
+		title = titleToggl ? "Dark mode" : "Light mode"
 		window.document.body.classList.toggle('dark-mode')
 	}
 </script>
@@ -13,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
 
-<i on:click={toggle} class="fa fa-moon-o"></i>
+<i title={title} on:click={toggle} class="fa fa-moon-o"></i>
 
 <Header/>
 <Body/>

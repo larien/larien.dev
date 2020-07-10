@@ -70,15 +70,16 @@ import { slide } from "svelte/transition"
             <p>de <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brasil</strong>.</p>
         {:else if language == "en"}
             <p>Hey!</p>
-            <p>My name is <strong class="highlight">Lauren</strong> and I'm a <strong class="highlight">{age} year old</strong></p>
+            <p>My name is <strong class="highlight">Lauren</strong></p>
+            <p>and I'm a <strong class="highlight">{age} year old</strong></p>
             <p>~typewriter~</p>
             <p>based in <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brazil</strong>.</p>
         {:else if language == "es"}
-            <p>Hey!</p>
+            <p>¡Hola!</p>
             <p>Soy <strong class="highlight">Lauren</strong>.</p>
             <p>Tengo <strong class="highlight">{age} años</strong> y soy</p>
             <p>~typewriter~</p>
-            <p>que vive en <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brasil</strong>.</p>
+            <p>de <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brasil</strong>.</p>
         {/if}
         
     </h1>

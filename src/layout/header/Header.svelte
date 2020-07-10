@@ -3,7 +3,7 @@
 </script>
 
 <section id="header">
-        <Logo heigth=50 />
+        <Logo height=50 />
 </section>
 
 <style>

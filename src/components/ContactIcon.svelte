@@ -41,7 +41,7 @@
         border-radius: 8px;
         color: var(--secondary-text-color);
         font-size:30px;
-        padding:15px;
+        padding: 15px 20px;
         margin: 15px;  
     }
     .contact:hover {
