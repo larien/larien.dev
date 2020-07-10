@@ -5,28 +5,28 @@
 <div class="contact {icon}">
     {#if icon == "email"}
         <a
-            title="E-mail address"
+            title="E-mail"
             href="mailto:lauren.ferremch@gmail.com"
             >
             <i class="fa fa-envelope"></i>
         </a>
     {:else if icon == "linkedin"}
         <a
-            title="LinkedIn page"
+            title="LinkedIn"
             href="https://www.linkedin.com/in/lauren-ferreira-9836914b/"
             >
             <i class="fa fa-linkedin"></i>
         </a>
     {:else if icon == "twitter"}
         <a
-            title="Twitter page"
+            title="Twitter"
             href="http://www.twitter.com/larienmf"
             >
             <i class="fa fa-twitter"></i>
         </a>
     {:else if icon == "github"}
         <a
-            title="GitHub page"
+            title="GitHub"
             href="https://github.com/larien"
             >
             <i class="fa fa-github"></i>

@@ -2112,11 +2112,11 @@ var app = (function () {
     			a = element("a");
     			i = element("i");
     			attr_dev(i, "class", "fa fa-github");
-    			add_location(i, file$5, 31, 12, 829);
-    			attr_dev(a, "title", "GitHub page");
+    			add_location(i, file$5, 31, 12, 806);
+    			attr_dev(a, "title", "GitHub");
     			attr_dev(a, "href", "https://github.com/larien");
     			attr_dev(a, "class", "svelte-1jbdpm");
-    			add_location(a, file$5, 27, 8, 723);
+    			add_location(a, file$5, 27, 8, 705);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2148,11 +2148,11 @@ var app = (function () {
     			a = element("a");
     			i = element("i");
     			attr_dev(i, "class", "fa fa-twitter");
-    			add_location(i, file$5, 24, 12, 640);
-    			attr_dev(a, "title", "Twitter page");
+    			add_location(i, file$5, 24, 12, 622);
+    			attr_dev(a, "title", "Twitter");
     			attr_dev(a, "href", "http://www.twitter.com/larienmf");
     			attr_dev(a, "class", "svelte-1jbdpm");
-    			add_location(a, file$5, 20, 8, 527);
+    			add_location(a, file$5, 20, 8, 514);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2184,11 +2184,11 @@ var app = (function () {
     			a = element("a");
     			i = element("i");
     			attr_dev(i, "class", "fa fa-linkedin");
-    			add_location(i, file$5, 17, 12, 442);
-    			attr_dev(a, "title", "LinkedIn page");
+    			add_location(i, file$5, 17, 12, 429);
+    			attr_dev(a, "title", "LinkedIn");
     			attr_dev(a, "href", "https://www.linkedin.com/in/lauren-ferreira-9836914b/");
     			attr_dev(a, "class", "svelte-1jbdpm");
-    			add_location(a, file$5, 13, 8, 306);
+    			add_location(a, file$5, 13, 8, 298);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2220,8 +2220,8 @@ var app = (function () {
     			a = element("a");
     			i = element("i");
     			attr_dev(i, "class", "fa fa-envelope");
-    			add_location(i, file$5, 10, 12, 220);
-    			attr_dev(a, "title", "E-mail address");
+    			add_location(i, file$5, 10, 12, 212);
+    			attr_dev(a, "title", "E-mail");
     			attr_dev(a, "href", "mailto:lauren.ferremch@gmail.com");
     			attr_dev(a, "class", "svelte-1jbdpm");
     			add_location(a, file$5, 6, 8, 104);
