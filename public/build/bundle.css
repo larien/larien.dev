@@ -3,9 +3,8 @@ body{display:flex;min-height:100vh;flex-direction:column;background-color:var(--
 a.svelte-cyzzic{color:inherit}.contact.svelte-cyzzic{border-style:0 solid;border-radius:8px;color:var(--secondary-text-color);font-size:30px;padding:15px;margin:15px}.contact.svelte-cyzzic:hover{color:white}.email.svelte-cyzzic:hover{background-color:red}.linkedin.svelte-cyzzic:hover{background-color:#2867B2}.github.svelte-cyzzic:hover{background-color:black}.twitter.svelte-cyzzic:hover{background-color:#1da1f2}
 p.svelte-i1exto{color:var(--secondary-text-color);position:absolute;left:15px;bottom:0px}
 .logo.svelte-c2p9gc{margin:20px;position:absolute}
-button.svelte-161hucv{background-color:#f76027;border:none;border-radius:4px;padding:0.5rem;position:absolute;right:10px}body.dark-mode button.svelte-161hucv{background-color:#0084f6}
 p.svelte-15aefnf{color:var(--secondary-text-color);position:absolute;right:15px;bottom:0px}
-#body.svelte-1z0ssww{display:flex;flex:1}h1.svelte-1z0ssww{margin-left:auto;margin-right:auto;margin-bottom:auto;margin-top:auto;font-size:200%;font-weight:normal}.highlight.svelte-1z0ssww{color:var(--blue)}
+#body.svelte-tchylh{display:flex;flex:1}h1.svelte-tchylh{margin-left:auto;margin-right:auto;margin-bottom:auto;margin-top:auto;font-size:200%;font-weight:normal}.highlight.svelte-tchylh{color:var(--blue)}i.svelte-tchylh{font-size:30px;color:var(--blue)}.languages.svelte-tchylh{position:absolute;right:0px;font-size:20px;margin-right:20px;padding-right:20px;color:var(--secondary-text-color);cursor:default}.selected.svelte-tchylh{color:var(--blue)}
 #footer.svelte-1gcu89c{height:100px;margin-top:auto}
 #header.svelte-4fx93g{height:100px;margin-bottom:auto}
 
