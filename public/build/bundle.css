@@ -3,6 +3,7 @@ body{display:flex;min-height:100vh;flex-direction:column;background-color:var(--
 a.svelte-1jbdpm{color:inherit}.contact.svelte-1jbdpm{border-style:0 solid;border-radius:8px;color:var(--secondary-text-color);font-size:30px;padding:15px 20px;margin:15px}.contact.svelte-1jbdpm:hover{color:white}.email.svelte-1jbdpm:hover{background-color:red}.linkedin.svelte-1jbdpm:hover{background-color:#2867B2}.github.svelte-1jbdpm:hover{background-color:black}.twitter.svelte-1jbdpm:hover{background-color:#1da1f2}
 p.svelte-i1exto{color:var(--secondary-text-color);position:absolute;left:15px;bottom:0px}
 .logo.svelte-c2p9gc{margin:20px;position:absolute}
+@keyframes svelte-1ten72p-cursorFade{0%{opacity:1}50%{opacity:0}100%{opacity:1}}.cursor.svelte-1ten72p .typing::after{content:'▌';display:inline-block;color:var(--cursor-color);animation:svelte-1ten72p-cursorFade 1.25s infinite}
 p.svelte-15aefnf{color:var(--secondary-text-color);position:absolute;right:15px;bottom:0px}
 #body.svelte-tchylh{display:flex;flex:1}h1.svelte-tchylh{margin-left:auto;margin-right:auto;margin-bottom:auto;margin-top:auto;font-size:200%;font-weight:normal}.highlight.svelte-tchylh{color:var(--blue)}i.svelte-tchylh{font-size:30px;color:var(--blue)}.languages.svelte-tchylh{position:absolute;right:0px;font-size:20px;margin-right:20px;padding-right:20px;color:var(--secondary-text-color);cursor:default}.selected.svelte-tchylh{color:var(--blue)}
 #footer.svelte-1gcu89c{height:100px;margin-top:auto}

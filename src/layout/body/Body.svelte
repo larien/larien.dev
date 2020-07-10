@@ -1,5 +1,5 @@
 <script>
-import { slide } from "svelte/transition"
+    import Typewriter from '../../components/Typewriter.svelte'
 
     let birth = new Date('1997/07/05')
     let current = new Date()
@@ -62,26 +62,48 @@ import { slide } from "svelte/transition"
         {/if}
     </h4>
     <h1>
-        {#if language == "pt"}
+        <!-- {#if language == "pt"}
             <p>Olá!</p>
             <p>Meu nome é <strong class="highlight">Lauren</strong>.</p>
             <p>Tenho <strong class="highlight">{age} anos</strong> e sou uma</p>
-            <p>~typewriter~</p>
-            <p>de <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brasil</strong>.</p>
-        {:else if language == "en"}
-            <p>Hey!</p>
-            <p>My name is <strong class="highlight">Lauren</strong></p>
-            <p>and I'm a <strong class="highlight">{age} year old</strong></p>
-            <p>~typewriter~</p>
-            <p>based in <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brazil</strong>.</p>
-        {:else if language == "es"}
-            <p>¡Hola!</p>
-            <p>Soy <strong class="highlight">Lauren</strong>.</p>
-            <p>Tengo <strong class="highlight">{age} años</strong> y soy</p>
-            <p>~typewriter~</p>
             <p>de <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brasil</strong>.</p>
         {/if}
-        
+        {#if language == "en"}
+            <p>Hey!</p>
+            <p>My name is <strong class="highlight">Lauren</strong></p>
+            <p>and I'm a <strong class="highlight">{age} year old</strong></p> -->
+            <!-- <Typewriter loop interval={70} cursor=#1da1f2>
+                <p>sofware developer</p>
+                <p>Computer Engineering student</p>
+                <p>Gopher</p>
+                <p>Korra fangirl</p>
+                <p>amazon in training</p>
+            </Typewriter> -->
+            <!-- <p>based in <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brazil</strong>.</p>
+        {/if}
+        {#if language == "es"}
+            <p>¡Hola!</p>
+            <p>Soy <strong class="highlight">Lauren</strong>.</p>
+            <p>Tengo <strong class="highlight">{age} años</strong> y soy</p> -->
+            <!-- <Typewriter loop interval={70} cursor=#1da1f2>
+                <p>sofware developer</p>
+                <p>estudiante de Ingeniería Informática</p>
+                <p>Gopher</p>
+                <p>Korra fangirl</p>
+                <p>amazon en entrenamiento</p>
+            </Typewriter> -->
+            <!-- <p>de <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brasil</strong>.</p>
+        {/if} -->
+                {#if language == "pt"}
+                    <Typewriter loop interval={70} cursor=#1da1f2>
+                        <p>Português</p>
+                    </Typewriter>
+                {/if}
+                {#if language == "en"}
+                    <Typewriter loop interval={70} cursor=#1da1f2>
+                        <p>Inglês</p>
+                    </Typewriter>
+                {/if}
     </h1>
 </section>
 
