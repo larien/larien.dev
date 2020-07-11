@@ -73,7 +73,7 @@
             <p>My name is <strong class="highlight">Lauren</strong></p>
             <p>and I'm a <strong class="highlight">{age} year old</strong></p>
             <Typewriter loop interval={70} cursor=#1da1f2>
-                <p>sofware developer</p>
+                <p>software developer</p>
                 <p>Computer Engineering student</p>
                 <p>Gopher</p>
                 <p>Korra fangirl</p>
@@ -86,7 +86,7 @@
             <p>Soy <strong class="highlight">Lauren</strong>.</p>
             <p>Tengo <strong class="highlight">{age} años</strong> y soy</p> -->
             <!-- <Typewriter loop interval={70} cursor=#1da1f2>
-                <p>sofware developer</p>
+                <p>software developer</p>
                 <p>estudiante de Ingeniería Informática</p>
                 <p>Gopher</p>
                 <p>Korra fangirl</p>
