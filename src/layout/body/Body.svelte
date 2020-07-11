@@ -6,7 +6,7 @@
     let diff = current - birth
     let age = Math.floor(diff/31557600000); // divide by 1000*60*60*24*365.25
     
-    let language = "pt"
+    let language = "en"
     let toggleLanguage = false
     let selectable = true
 
@@ -23,15 +23,15 @@
         changeLanguage = changeLanguages[language]
     }
     
-    function selectPt() {
-        language = "pt"
-        changeLanguage = changeLanguages[language]
-    }
+    // function selectPt() {
+    //     language = "pt"
+    //     changeLanguage = changeLanguages[language]
+    // }
     
-    function selectEs() {
-        language = "es"
-        changeLanguage = changeLanguages[language]
-    }
+    // function selectEs() {
+    //     language = "es"
+    //     changeLanguage = changeLanguages[language]
+    // }
     
     function toggleLang() {
         toggleLanguage = !toggleLanguage
@@ -44,21 +44,21 @@
     <h4 class="languages {language}">    
         <i on:click={toggleLang} title={changeLanguage} class="fa fa-language"></i>
         {#if toggleLanguage}
-            {#if language == "pt"}
+            <!-- {#if language == "pt"}
                 <p on:click={selectPt} class="selected">PT</p>
             {:else}
                 <p on:click={selectPt}>PT</p>
-            {/if}
+            {/if} -->
             {#if language == "en"}
                 <p on:click={selectEn} class="selected">EN</p>
             {:else}
                 <p on:click={selectEn}>EN</p>
             {/if}
-            {#if language == "es"}
+            <!-- {#if language == "es"}
                 <p on:click={selectEs} class="selected">ES</p>
             {:else}
                 <p on:click={selectEs}>ES</p>
-            {/if}
+            {/if} -->
         {/if}
     </h4>
     <h1>
@@ -67,21 +67,21 @@
             <p>Meu nome é <strong class="highlight">Lauren</strong>.</p>
             <p>Tenho <strong class="highlight">{age} anos</strong> e sou uma</p>
             <p>de <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brasil</strong>.</p>
-        {/if}
+        {/if} -->
         {#if language == "en"}
-            <p>Hey!</p>
+            <p>Howdy!</p>
             <p>My name is <strong class="highlight">Lauren</strong></p>
-            <p>and I'm a <strong class="highlight">{age} year old</strong></p> -->
-            <!-- <Typewriter loop interval={70} cursor=#1da1f2>
+            <p>and I'm a <strong class="highlight">{age} year old</strong></p>
+            <Typewriter loop interval={70} cursor=#1da1f2>
                 <p>sofware developer</p>
                 <p>Computer Engineering student</p>
                 <p>Gopher</p>
                 <p>Korra fangirl</p>
                 <p>amazon in training</p>
-            </Typewriter> -->
-            <!-- <p>based in <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brazil</strong>.</p>
+            </Typewriter>
+            <p>based in <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brazil</strong>.</p>
         {/if}
-        {#if language == "es"}
+       <!--  {#if language == "es"}
             <p>¡Hola!</p>
             <p>Soy <strong class="highlight">Lauren</strong>.</p>
             <p>Tengo <strong class="highlight">{age} años</strong> y soy</p> -->
@@ -94,16 +94,6 @@
             </Typewriter> -->
             <!-- <p>de <strong class="highlight">São Paulo</strong>, <strong class="highlight">Brasil</strong>.</p>
         {/if} -->
-                {#if language == "pt"}
-                    <Typewriter loop interval={70} cursor=#1da1f2>
-                        <p>Português</p>
-                    </Typewriter>
-                {/if}
-                {#if language == "en"}
-                    <Typewriter loop interval={70} cursor=#1da1f2>
-                        <p>Inglês</p>
-                    </Typewriter>
-                {/if}
     </h1>
 </section>
 

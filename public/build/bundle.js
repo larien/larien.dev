@@ -1252,102 +1252,48 @@ var app = (function () {
     const file$3 = "src/layout/body/Body.svelte";
 
     // (46:8) {#if toggleLanguage}
-    function create_if_block_2(ctx) {
-    	let t0;
-    	let t1;
-    	let if_block2_anchor;
+    function create_if_block_1(ctx) {
+    	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*language*/ ctx[0] == "pt") return create_if_block_5;
-    		return create_else_block_2;
-    	}
-
-    	let current_block_type = select_block_type(ctx);
-    	let if_block0 = current_block_type(ctx);
-
-    	function select_block_type_1(ctx, dirty) {
-    		if (/*language*/ ctx[0] == "en") return create_if_block_4;
-    		return create_else_block_1;
-    	}
-
-    	let current_block_type_1 = select_block_type_1(ctx);
-    	let if_block1 = current_block_type_1(ctx);
-
-    	function select_block_type_2(ctx, dirty) {
-    		if (/*language*/ ctx[0] == "es") return create_if_block_3;
+    		if (/*language*/ ctx[0] == "en") return create_if_block_2;
     		return create_else_block;
     	}
 
-    	let current_block_type_2 = select_block_type_2(ctx);
-    	let if_block2 = current_block_type_2(ctx);
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
 
     	const block = {
     		c: function create() {
-    			if_block0.c();
-    			t0 = space();
-    			if_block1.c();
-    			t1 = space();
-    			if_block2.c();
-    			if_block2_anchor = empty();
+    			if_block.c();
+    			if_block_anchor = empty();
     		},
     		m: function mount(target, anchor) {
-    			if_block0.m(target, anchor);
-    			insert_dev(target, t0, anchor);
-    			if_block1.m(target, anchor);
-    			insert_dev(target, t1, anchor);
-    			if_block2.m(target, anchor);
-    			insert_dev(target, if_block2_anchor, anchor);
+    			if_block.m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block0) {
-    				if_block0.p(ctx, dirty);
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(ctx, dirty);
     			} else {
-    				if_block0.d(1);
-    				if_block0 = current_block_type(ctx);
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
 
-    				if (if_block0) {
-    					if_block0.c();
-    					if_block0.m(t0.parentNode, t0);
-    				}
-    			}
-
-    			if (current_block_type_1 === (current_block_type_1 = select_block_type_1(ctx)) && if_block1) {
-    				if_block1.p(ctx, dirty);
-    			} else {
-    				if_block1.d(1);
-    				if_block1 = current_block_type_1(ctx);
-
-    				if (if_block1) {
-    					if_block1.c();
-    					if_block1.m(t1.parentNode, t1);
-    				}
-    			}
-
-    			if (current_block_type_2 === (current_block_type_2 = select_block_type_2(ctx)) && if_block2) {
-    				if_block2.p(ctx, dirty);
-    			} else {
-    				if_block2.d(1);
-    				if_block2 = current_block_type_2(ctx);
-
-    				if (if_block2) {
-    					if_block2.c();
-    					if_block2.m(if_block2_anchor.parentNode, if_block2_anchor);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
     				}
     			}
     		},
     		d: function destroy(detaching) {
-    			if_block0.d(detaching);
-    			if (detaching) detach_dev(t0);
-    			if_block1.d(detaching);
-    			if (detaching) detach_dev(t1);
-    			if_block2.d(detaching);
-    			if (detaching) detach_dev(if_block2_anchor);
+    			if_block.d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_2.name,
+    		id: create_if_block_1.name,
     		type: "if",
     		source: "(46:8) {#if toggleLanguage}",
     		ctx
@@ -1356,165 +1302,7 @@ var app = (function () {
     	return block;
     }
 
-    // (49:12) {:else}
-    function create_else_block_2(ctx) {
-    	let p;
-    	let mounted;
-    	let dispose;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			p.textContent = "PT";
-    			add_location(p, file$3, 49, 16, 1282);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-
-    			if (!mounted) {
-    				dispose = listen_dev(p, "click", /*selectPt*/ ctx[4], false, false, false);
-    				mounted = true;
-    			}
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    			mounted = false;
-    			dispose();
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_else_block_2.name,
-    		type: "else",
-    		source: "(49:12) {:else}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (47:12) {#if language == "pt"}
-    function create_if_block_5(ctx) {
-    	let p;
-    	let mounted;
-    	let dispose;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			p.textContent = "PT";
-    			attr_dev(p, "class", "selected svelte-tchylh");
-    			add_location(p, file$3, 47, 16, 1199);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-
-    			if (!mounted) {
-    				dispose = listen_dev(p, "click", /*selectPt*/ ctx[4], false, false, false);
-    				mounted = true;
-    			}
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    			mounted = false;
-    			dispose();
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_5.name,
-    		type: "if",
-    		source: "(47:12) {#if language == \\\"pt\\\"}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
     // (54:12) {:else}
-    function create_else_block_1(ctx) {
-    	let p;
-    	let mounted;
-    	let dispose;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			p.textContent = "EN";
-    			add_location(p, file$3, 54, 16, 1464);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-
-    			if (!mounted) {
-    				dispose = listen_dev(p, "click", /*selectEn*/ ctx[3], false, false, false);
-    				mounted = true;
-    			}
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    			mounted = false;
-    			dispose();
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_else_block_1.name,
-    		type: "else",
-    		source: "(54:12) {:else}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (52:12) {#if language == "en"}
-    function create_if_block_4(ctx) {
-    	let p;
-    	let mounted;
-    	let dispose;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			p.textContent = "EN";
-    			attr_dev(p, "class", "selected svelte-tchylh");
-    			add_location(p, file$3, 52, 16, 1381);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-
-    			if (!mounted) {
-    				dispose = listen_dev(p, "click", /*selectEn*/ ctx[3], false, false, false);
-    				mounted = true;
-    			}
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    			mounted = false;
-    			dispose();
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_4.name,
-    		type: "if",
-    		source: "(52:12) {#if language == \\\"en\\\"}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (59:12) {:else}
     function create_else_block(ctx) {
     	let p;
     	let mounted;
@@ -1523,14 +1311,14 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "ES";
-    			add_location(p, file$3, 59, 16, 1646);
+    			p.textContent = "EN";
+    			add_location(p, file$3, 54, 16, 1497);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
 
     			if (!mounted) {
-    				dispose = listen_dev(p, "click", /*selectEs*/ ctx[5], false, false, false);
+    				dispose = listen_dev(p, "click", /*selectEn*/ ctx[4], false, false, false);
     				mounted = true;
     			}
     		},
@@ -1546,15 +1334,15 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(59:12) {:else}",
+    		source: "(54:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:12) {#if language == "es"}
-    function create_if_block_3(ctx) {
+    // (52:12) {#if language == "en"}
+    function create_if_block_2(ctx) {
     	let p;
     	let mounted;
     	let dispose;
@@ -1562,15 +1350,15 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "ES";
+    			p.textContent = "EN";
     			attr_dev(p, "class", "selected svelte-tchylh");
-    			add_location(p, file$3, 57, 16, 1563);
+    			add_location(p, file$3, 52, 16, 1414);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
 
     			if (!mounted) {
-    				dispose = listen_dev(p, "click", /*selectEs*/ ctx[5], false, false, false);
+    				dispose = listen_dev(p, "click", /*selectEn*/ ctx[4], false, false, false);
     				mounted = true;
     			}
     		},
@@ -1584,96 +1372,35 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_3.name,
+    		id: create_if_block_2.name,
     		type: "if",
-    		source: "(57:12) {#if language == \\\"es\\\"}",
+    		source: "(52:12) {#if language == \\\"en\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (97:16) {#if language == "pt"}
-    function create_if_block_1(ctx) {
-    	let typewriter;
-    	let current;
-
-    	typewriter = new Typewriter({
-    			props: {
-    				loop: true,
-    				interval: 70,
-    				cursor: "#1da1f2",
-    				$$slots: { default: [create_default_slot_1] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	const block = {
-    		c: function create() {
-    			create_component(typewriter.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(typewriter, target, anchor);
-    			current = true;
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(typewriter.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(typewriter.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(typewriter, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_1.name,
-    		type: "if",
-    		source: "(97:16) {#if language == \\\"pt\\\"}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (98:20) <Typewriter loop interval={70} cursor=#1da1f2>
-    function create_default_slot_1(ctx) {
-    	let p;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			p.textContent = "Português";
-    			add_location(p, file$3, 98, 24, 3485);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_1.name,
-    		type: "slot",
-    		source: "(98:20) <Typewriter loop interval={70} cursor=#1da1f2>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (102:16) {#if language == "en"}
+    // (71:8) {#if language == "en"}
     function create_if_block(ctx) {
+    	let p0;
+    	let t1;
+    	let p1;
+    	let t2;
+    	let strong0;
+    	let t4;
+    	let p2;
+    	let t5;
+    	let strong1;
+    	let t8;
     	let typewriter;
+    	let t9;
+    	let p3;
+    	let t10;
+    	let strong2;
+    	let t12;
+    	let strong3;
+    	let t14;
     	let current;
 
     	typewriter = new Typewriter({
@@ -1689,11 +1416,71 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			p0 = element("p");
+    			p0.textContent = "Howdy!";
+    			t1 = space();
+    			p1 = element("p");
+    			t2 = text("My name is ");
+    			strong0 = element("strong");
+    			strong0.textContent = "Lauren";
+    			t4 = space();
+    			p2 = element("p");
+    			t5 = text("and I'm a ");
+    			strong1 = element("strong");
+    			strong1.textContent = `${/*age*/ ctx[3]} year old`;
+    			t8 = space();
     			create_component(typewriter.$$.fragment);
+    			t9 = space();
+    			p3 = element("p");
+    			t10 = text("based in ");
+    			strong2 = element("strong");
+    			strong2.textContent = "São Paulo";
+    			t12 = text(", ");
+    			strong3 = element("strong");
+    			strong3.textContent = "Brazil";
+    			t14 = text(".");
+    			add_location(p0, file$3, 71, 12, 2155);
+    			attr_dev(strong0, "class", "highlight svelte-tchylh");
+    			add_location(strong0, file$3, 72, 26, 2195);
+    			add_location(p1, file$3, 72, 12, 2181);
+    			attr_dev(strong1, "class", "highlight svelte-tchylh");
+    			add_location(strong1, file$3, 73, 25, 2266);
+    			add_location(p2, file$3, 73, 12, 2253);
+    			attr_dev(strong2, "class", "highlight svelte-tchylh");
+    			add_location(strong2, file$3, 81, 24, 2631);
+    			attr_dev(strong3, "class", "highlight svelte-tchylh");
+    			add_location(strong3, file$3, 81, 70, 2677);
+    			add_location(p3, file$3, 81, 12, 2619);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, p0, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, p1, anchor);
+    			append_dev(p1, t2);
+    			append_dev(p1, strong0);
+    			insert_dev(target, t4, anchor);
+    			insert_dev(target, p2, anchor);
+    			append_dev(p2, t5);
+    			append_dev(p2, strong1);
+    			insert_dev(target, t8, anchor);
     			mount_component(typewriter, target, anchor);
+    			insert_dev(target, t9, anchor);
+    			insert_dev(target, p3, anchor);
+    			append_dev(p3, t10);
+    			append_dev(p3, strong2);
+    			append_dev(p3, t12);
+    			append_dev(p3, strong3);
+    			append_dev(p3, t14);
     			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const typewriter_changes = {};
+
+    			if (dirty & /*$$scope*/ 2048) {
+    				typewriter_changes.$$scope = { dirty, ctx };
+    			}
+
+    			typewriter.$set(typewriter_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -1705,7 +1492,15 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(p1);
+    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(p2);
+    			if (detaching) detach_dev(t8);
     			destroy_component(typewriter, detaching);
+    			if (detaching) detach_dev(t9);
+    			if (detaching) detach_dev(p3);
     		}
     	};
 
@@ -1713,28 +1508,68 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(102:16) {#if language == \\\"en\\\"}",
+    		source: "(71:8) {#if language == \\\"en\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (103:20) <Typewriter loop interval={70} cursor=#1da1f2>
+    // (75:12) <Typewriter loop interval={70} cursor=#1da1f2>
     function create_default_slot(ctx) {
-    	let p;
+    	let p0;
+    	let t1;
+    	let p1;
+    	let t3;
+    	let p2;
+    	let t5;
+    	let p3;
+    	let t7;
+    	let p4;
 
     	const block = {
     		c: function create() {
-    			p = element("p");
-    			p.textContent = "Inglês";
-    			add_location(p, file$3, 103, 24, 3688);
+    			p0 = element("p");
+    			p0.textContent = "sofware developer";
+    			t1 = space();
+    			p1 = element("p");
+    			p1.textContent = "Computer Engineering student";
+    			t3 = space();
+    			p2 = element("p");
+    			p2.textContent = "Gopher";
+    			t5 = space();
+    			p3 = element("p");
+    			p3.textContent = "Korra fangirl";
+    			t7 = space();
+    			p4 = element("p");
+    			p4.textContent = "amazon in training";
+    			add_location(p0, file$3, 75, 16, 2395);
+    			add_location(p1, file$3, 76, 16, 2436);
+    			add_location(p2, file$3, 77, 16, 2488);
+    			add_location(p3, file$3, 78, 16, 2518);
+    			add_location(p4, file$3, 79, 16, 2555);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
+    			insert_dev(target, p0, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, p1, anchor);
+    			insert_dev(target, t3, anchor);
+    			insert_dev(target, p2, anchor);
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, p3, anchor);
+    			insert_dev(target, t7, anchor);
+    			insert_dev(target, p4, anchor);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
+    			if (detaching) detach_dev(p0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(p1);
+    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(p2);
+    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(p3);
+    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(p4);
     		}
     	};
 
@@ -1742,7 +1577,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(103:20) <Typewriter loop interval={70} cursor=#1da1f2>",
+    		source: "(75:12) <Typewriter loop interval={70} cursor=#1da1f2>",
     		ctx
     	});
 
@@ -1757,13 +1592,11 @@ var app = (function () {
     	let h4_class_value;
     	let t1;
     	let h1;
-    	let t2;
     	let current;
     	let mounted;
     	let dispose;
-    	let if_block0 = /*toggleLanguage*/ ctx[1] && create_if_block_2(ctx);
-    	let if_block1 = /*language*/ ctx[0] == "pt" && create_if_block_1(ctx);
-    	let if_block2 = /*language*/ ctx[0] == "en" && create_if_block(ctx);
+    	let if_block0 = /*toggleLanguage*/ ctx[1] && create_if_block_1(ctx);
+    	let if_block1 = /*language*/ ctx[0] == "en" && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
@@ -1775,18 +1608,16 @@ var app = (function () {
     			t1 = space();
     			h1 = element("h1");
     			if (if_block1) if_block1.c();
-    			t2 = space();
-    			if (if_block2) if_block2.c();
     			attr_dev(i, "title", /*changeLanguage*/ ctx[2]);
     			attr_dev(i, "class", "fa fa-language svelte-tchylh");
-    			add_location(i, file$3, 44, 8, 1043);
+    			add_location(i, file$3, 44, 8, 1067);
     			attr_dev(h4, "class", h4_class_value = "languages " + /*language*/ ctx[0] + " svelte-tchylh");
-    			add_location(h4, file$3, 43, 4, 997);
+    			add_location(h4, file$3, 43, 4, 1021);
     			attr_dev(h1, "class", "svelte-tchylh");
-    			add_location(h1, file$3, 63, 4, 1722);
+    			add_location(h1, file$3, 63, 4, 1764);
     			attr_dev(section, "id", "body");
     			attr_dev(section, "class", "svelte-tchylh");
-    			add_location(section, file$3, 42, 0, 973);
+    			add_location(section, file$3, 42, 0, 997);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1800,12 +1631,10 @@ var app = (function () {
     			append_dev(section, t1);
     			append_dev(section, h1);
     			if (if_block1) if_block1.m(h1, null);
-    			append_dev(h1, t2);
-    			if (if_block2) if_block2.m(h1, null);
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(i, "click", /*toggleLang*/ ctx[6], false, false, false);
+    				dispose = listen_dev(i, "click", /*toggleLang*/ ctx[5], false, false, false);
     				mounted = true;
     			}
     		},
@@ -1818,7 +1647,7 @@ var app = (function () {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     				} else {
-    					if_block0 = create_if_block_2(ctx);
+    					if_block0 = create_if_block_1(ctx);
     					if_block0.c();
     					if_block0.m(h4, null);
     				}
@@ -1831,16 +1660,18 @@ var app = (function () {
     				attr_dev(h4, "class", h4_class_value);
     			}
 
-    			if (/*language*/ ctx[0] == "pt") {
+    			if (/*language*/ ctx[0] == "en") {
     				if (if_block1) {
+    					if_block1.p(ctx, dirty);
+
     					if (dirty & /*language*/ 1) {
     						transition_in(if_block1, 1);
     					}
     				} else {
-    					if_block1 = create_if_block_1(ctx);
+    					if_block1 = create_if_block(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
-    					if_block1.m(h1, t2);
+    					if_block1.m(h1, null);
     				}
     			} else if (if_block1) {
     				group_outros();
@@ -1851,44 +1682,20 @@ var app = (function () {
 
     				check_outros();
     			}
-
-    			if (/*language*/ ctx[0] == "en") {
-    				if (if_block2) {
-    					if (dirty & /*language*/ 1) {
-    						transition_in(if_block2, 1);
-    					}
-    				} else {
-    					if_block2 = create_if_block(ctx);
-    					if_block2.c();
-    					transition_in(if_block2, 1);
-    					if_block2.m(h1, null);
-    				}
-    			} else if (if_block2) {
-    				group_outros();
-
-    				transition_out(if_block2, 1, 1, () => {
-    					if_block2 = null;
-    				});
-
-    				check_outros();
-    			}
     		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(if_block1);
-    			transition_in(if_block2);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(if_block1);
-    			transition_out(if_block2);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(section);
     			if (if_block0) if_block0.d();
     			if (if_block1) if_block1.d();
-    			if (if_block2) if_block2.d();
     			mounted = false;
     			dispose();
     		}
@@ -1910,7 +1717,7 @@ var app = (function () {
     	let current = new Date();
     	let diff = current - birth;
     	let age = Math.floor(diff / 31557600000); // divide by 1000*60*60*24*365.25
-    	let language = "pt";
+    	let language = "en";
     	let toggleLanguage = false;
     	let selectable = true;
 
@@ -1927,16 +1734,14 @@ var app = (function () {
     		$$invalidate(2, changeLanguage = changeLanguages[language]);
     	}
 
-    	function selectPt() {
-    		$$invalidate(0, language = "pt");
-    		$$invalidate(2, changeLanguage = changeLanguages[language]);
-    	}
-
-    	function selectEs() {
-    		$$invalidate(0, language = "es");
-    		$$invalidate(2, changeLanguage = changeLanguages[language]);
-    	}
-
+    	// function selectPt() {
+    	//     language = "pt"
+    	//     changeLanguage = changeLanguages[language]
+    	// }
+    	// function selectEs() {
+    	//     language = "es"
+    	//     changeLanguage = changeLanguages[language]
+    	// }
     	function toggleLang() {
     		$$invalidate(1, toggleLanguage = !toggleLanguage);
     		selectable = true;
@@ -1963,8 +1768,6 @@ var app = (function () {
     		changeLanguages,
     		changeLanguage,
     		selectEn,
-    		selectPt,
-    		selectEs,
     		toggleLang
     	});
 
@@ -1972,7 +1775,7 @@ var app = (function () {
     		if ("birth" in $$props) birth = $$props.birth;
     		if ("current" in $$props) current = $$props.current;
     		if ("diff" in $$props) diff = $$props.diff;
-    		if ("age" in $$props) age = $$props.age;
+    		if ("age" in $$props) $$invalidate(3, age = $$props.age);
     		if ("language" in $$props) $$invalidate(0, language = $$props.language);
     		if ("toggleLanguage" in $$props) $$invalidate(1, toggleLanguage = $$props.toggleLanguage);
     		if ("selectable" in $$props) selectable = $$props.selectable;
@@ -1984,15 +1787,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [
-    		language,
-    		toggleLanguage,
-    		changeLanguage,
-    		selectEn,
-    		selectPt,
-    		selectEs,
-    		toggleLang
-    	];
+    	return [language, toggleLanguage, changeLanguage, age, selectEn, toggleLang];
     }
 
     class Body extends SvelteComponentDev {
@@ -2276,7 +2071,7 @@ var app = (function () {
     const file$6 = "src/components/ContactIcon.svelte";
 
     // (27:31) 
-    function create_if_block_3$1(ctx) {
+    function create_if_block_3(ctx) {
     	let a;
     	let i;
 
@@ -2302,7 +2097,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_3$1.name,
+    		id: create_if_block_3.name,
     		type: "if",
     		source: "(27:31) ",
     		ctx
@@ -2427,7 +2222,7 @@ var app = (function () {
     		if (/*icon*/ ctx[0] == "email") return create_if_block$1;
     		if (/*icon*/ ctx[0] == "linkedin") return create_if_block_1$1;
     		if (/*icon*/ ctx[0] == "twitter") return create_if_block_2$1;
-    		if (/*icon*/ ctx[0] == "github") return create_if_block_3$1;
+    		if (/*icon*/ ctx[0] == "github") return create_if_block_3;
     	}
 
     	let current_block_type = select_block_type(ctx);
